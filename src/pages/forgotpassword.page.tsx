@@ -9,6 +9,7 @@ import useStore from "../store";
 import { forgotPasswordFn } from "../api/authApi";
 import { useMutation } from "@tanstack/react-query";
 import Message from "../components/Message";
+import { Link } from "react-router-dom";
 
 const forgotPasswordSchema = object({
   email: string()
@@ -74,11 +75,15 @@ const ForgotPasswordPage = () => {
   return (
     <section className="bg-ct-blue-600 min-h-screen grid place-items-center">
       {data && isSuccess ? (
-        <Message
-          message={data?.message!}
-          path="/login"
-          pathText="Go back to the login"
-        />
+        <Message>
+          <p className="text-xl">{data.message}</p>
+          <p className="mt-8">
+            Didn't forget password{" "}
+            <Link to="/login" className="text-blue-700 underline">
+              Go back to the login
+            </Link>
+          </p>
+        </Message>
       ) : (
         <div className="w-full">
           <h1 className="text-4xl xl:text-6xl text-center font-[600] text-ct-yellow-600 mb-14">
