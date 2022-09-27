@@ -26,7 +26,6 @@ const EmailVerificationPage = () => {
     resolver: zodResolver(emailVerificationSchema),
   });
 
-  // 👇 API Login Mutation
   const { mutate: verifyEmail } = useMutation(
     (verificationCode: string) => verifyEmailFn(verificationCode),
     {

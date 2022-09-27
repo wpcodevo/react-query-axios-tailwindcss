@@ -2,27 +2,33 @@ import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import useStore from "../store";
 import Spinner from "./Spinner";
-import { authApi } from "../api/authApi";
-import { GenericResponse } from "../api/types";
+import { logoutUserFn } from "../api/authApi";
+import { useMutation } from "@tanstack/react-query";
 
 const Header = () => {
   const store = useStore();
   const user = store.authUser;
 
-  const logoutUser = async () => {
-    try {
+  const { mutate: logoutUser } = useMutation(() => logoutUserFn(), {
+    onMutate(variables) {
       store.setRequestLoading(true);
-      await authApi.get<GenericResponse>("/auth/logout");
+    },
+    onSuccess(data) {
       store.setRequestLoading(false);
       toast.success("Successfully logged out", {
         position: "top-right",
       });
       document.location.href = "/login";
-    } catch (error: any) {
+    },
+    onError(error: any) {
       store.setRequestLoading(false);
       store.setAuthUser(null);
       document.location.href = "/login";
-    }
+    },
+  });
+
+  const handleLogout = () => {
+    logoutUser();
   };
 
   return (
@@ -61,7 +67,7 @@ const Header = () => {
                     Profile
                   </Link>
                 </li>
-                <li className="cursor-pointer" onClick={logoutUser}>
+                <li className="cursor-pointer" onClick={handleLogout}>
                   Logout
                 </li>
               </>
