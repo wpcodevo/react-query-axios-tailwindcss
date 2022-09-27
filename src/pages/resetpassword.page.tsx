@@ -84,7 +84,7 @@ const ResetPasswordPage = () => {
             onSubmit={handleSubmit(onSubmitHandler)}
             className="max-w-md w-full mx-auto overflow-hidden shadow-lg bg-ct-dark-200 rounded-2xl p-8 space-y-5"
           >
-            <FormInput label="Password" name="password" type="password" />
+            <FormInput label="New Password" name="password" type="password" />
             <FormInput
               label="Confirm Password"
               name="passwordConfirm"

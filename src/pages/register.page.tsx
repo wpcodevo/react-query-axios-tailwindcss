@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import FormInput from "../components/FormInput";
 import { LoadingButton } from "../components/LoadingButton";
 import { toast } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { signUpUserFn } from "../api/authApi";
 import useStore from "../store";
 import { useMutation } from "@tanstack/react-query";
@@ -29,7 +29,6 @@ const registerSchema = object({
 export type RegisterInput = TypeOf<typeof registerSchema>;
 
 const RegisterPage = () => {
-  const navigate = useNavigate();
   const store = useStore();
 
   const methods = useForm<RegisterInput>({
@@ -48,7 +47,6 @@ const RegisterPage = () => {
     onSuccess(data) {
       store.setRequestLoading(false);
       toast.success(data?.message);
-      navigate("/verifyemail");
     },
     onError(error: any) {
       store.setRequestLoading(false);
