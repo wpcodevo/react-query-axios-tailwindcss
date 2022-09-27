@@ -86,7 +86,7 @@ const ForgotPasswordPage = () => {
         </Message>
       ) : (
         <div className="w-full">
-          <h1 className="text-4xl xl:text-6xl text-center font-[600] text-ct-yellow-600 mb-14">
+          <h1 className="text-4xl lg:text-6xl text-center font-[600] text-ct-yellow-600 mb-14">
             Forgot Password
           </h1>
           <FormProvider {...methods}>
