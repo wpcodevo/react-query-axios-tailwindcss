@@ -7,9 +7,8 @@ import { LoadingButton } from "../components/LoadingButton";
 import { toast } from "react-toastify";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useStore from "../store";
-import { ILoginResponse } from "../api/types";
-import { authApi, getMeFn, loginUserFn } from "../api/authApi";
-import { useQuery, useMutation } from "@tanstack/react-query";
+import { loginUserFn } from "../api/authApi";
+import { useMutation } from "@tanstack/react-query";
 
 const loginSchema = object({
   email: string()

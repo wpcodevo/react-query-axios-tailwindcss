@@ -76,7 +76,7 @@ const ResetPasswordPage = () => {
   return (
     <section className="bg-ct-blue-600 min-h-screen grid place-items-center">
       <div className="w-full">
-        <h1 className="text-4xl xl:text-6xl text-center font-[600] text-ct-yellow-600 mb-14">
+        <h1 className="text-4xl lg:text-6xl text-center font-[600] text-ct-yellow-600 mb-14">
           Reset Password
         </h1>
         <FormProvider {...methods}>
@@ -84,7 +84,7 @@ const ResetPasswordPage = () => {
             onSubmit={handleSubmit(onSubmitHandler)}
             className="max-w-md w-full mx-auto overflow-hidden shadow-lg bg-ct-dark-200 rounded-2xl p-8 space-y-5"
           >
-            <FormInput label="Password" name="password" type="password" />
+            <FormInput label="New Password" name="password" type="password" />
             <FormInput
               label="Confirm Password"
               name="passwordConfirm"

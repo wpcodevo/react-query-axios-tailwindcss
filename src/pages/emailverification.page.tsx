@@ -5,10 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import FormInput from "../components/FormInput";
 import { LoadingButton } from "../components/LoadingButton";
 import { toast } from "react-toastify";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useStore from "../store";
-import { authApi, verifyEmailFn } from "../api/authApi";
-import { GenericResponse } from "../api/types";
+import { verifyEmailFn } from "../api/authApi";
 import { useMutation } from "@tanstack/react-query";
 
 const emailVerificationSchema = object({
@@ -26,7 +25,6 @@ const EmailVerificationPage = () => {
     resolver: zodResolver(emailVerificationSchema),
   });
 
-  // 👇 API Login Mutation
   const { mutate: verifyEmail } = useMutation(
     (verificationCode: string) => verifyEmailFn(verificationCode),
     {
