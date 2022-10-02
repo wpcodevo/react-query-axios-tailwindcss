@@ -18,7 +18,7 @@ This article will give you a comprehensive overview of JSON Web Token authentica
 - Create Other Pages with TailwindCSS
 - Setup Routing in React
 
-Read the entire article here: [https://codevoweb.com/golang-crud-restful-api-with-sqlc-and-postgresql](https://codevoweb.com/golang-crud-restful-api-with-sqlc-and-postgresql)
+Read the entire article here: [https://codevoweb.com/react-query-user-registration-and-email-verification](https://codevoweb.com/react-query-user-registration-and-email-verification)
 
 Articles in this series:
 
