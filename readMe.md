@@ -1,8 +1,8 @@
 # Forgot/Reset Passwords with React Query and Axios
 
-![Forgot/Reset Passwords with React Query and Axios](https://codevoweb.com/wp-content/uploads/2022/10/Forgot-Reset-Passwords-with-React-Query-and-Axios.webp)
-
 In this comprehensive guide you will learn how to implement a forgot/reset password functionality with React, Axios, React Query, Zustand, and TypeScript.
+
+![Forgot/Reset Passwords with React Query and Axios](https://codevoweb.com/wp-content/uploads/2022/10/Forgot-Reset-Passwords-with-React-Query-and-Axios.webp)
 
 ## Topics Covered
 
