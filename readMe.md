@@ -9,3 +9,15 @@ This article will give you a comprehensive overview of JSON Web Token authentica
 ![Forgot/Reset Passwords with React Query and Axios](https://codevoweb.com/wp-content/uploads/2022/10/Forgot-Reset-Passwords-with-React-Query-and-Axios.webp)
 
 In this comprehensive guide you will learn how to implement a forgot/reset password functionality with React, Axios, React Query, Zustand, and TypeScript.
+
+## Topics Covered
+
+- Forgot/Reset Passwords Flow with React Query
+- Run the Forgot/Reset Passwords with React Query Locally
+- Setup and Run the Backend API
+- Create the API Requests with Axios
+- Create the Forgot Password Component
+- Create the Password Reset Component
+- Create the Login Component
+
+Read the entire article here: [https://codevoweb.com/forgot-reset-passwords-with-react-query-and-axios](https://codevoweb.com/forgot-reset-passwords-with-react-query-and-axios)
